@@ -24,6 +24,10 @@ main {
     background-color: rgba(255, 255, 255, 0.1);
     box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
 }
 
 #form {
@@ -32,6 +36,7 @@ main {
     align-items: center;
     gap: 10px;
     color: white;
+    flex-grow: 1;
 }
 
 .input {
@@ -60,18 +65,35 @@ button {
     color: white;
 }
 
-#mapa-container {
-    margin-top: 20px;
-    width: 100%; /* Garante que o mapa se ajuste ao tamanho do formulário */
-    height: 250px; /* Define uma altura fixa para o mapa */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 #mapa-estatico {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Faz o mapa cobrir toda a área sem distorcer */
+    object-fit: cover;
     border-radius: 5px;
+}
+
+@media (max-width: 480px) {
+    main {
+        padding: 15px;
+        max-width: 90%; 
+        height: auto; 
+    }
+
+    .input {
+        padding: 10px;
+    }
+
+    .buttons {
+        flex-direction: column; 
+        gap: 15px;
+    }
+
+    button {
+        width: 100%;
+        padding: 12px;
+    }
+
+    #mapa-container {
+        height: 200px;
+    }
 }
