@@ -20,7 +20,8 @@ cep.addEventListener('input', (event) => {
     cep.value = value.substring(0, 9); 
 });
 
-cep.addEventListener('blur', async () => {
+// Função para realizar a busca na API
+const buscarCep = async () => {
     const cepValue = cep.value.replace(/\D/g, '');
 
     if (cepValue.length !== 8) {
@@ -55,6 +56,16 @@ cep.addEventListener('blur', async () => {
         bairro.value = "";
         cidade.value = "";
         uf.value = "";
+    }
+};
+
+// Chama a função ao perder o foco (blur)
+cep.addEventListener('blur', buscarCep);
+
+// Chama a função ao pressionar Enter
+cep.addEventListener('keydown', (event) => {
+    if (event.key === 'Enter') {
+        buscarCep();
     }
 });
 
