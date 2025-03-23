@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background: linear-gradient(to bottom, #051937, #1e3256, #354d77, #4d6a9a, #6689be);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    border: 2px solid white;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
+    text-align: center;
+}
+
+#form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    color: white;
+}
+
+.input {
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+    border: 2px solid black;
+    text-align: center;
+}
+
+.buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+button {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#btn-limpar {
+    background-color: red;
+    color: white;
+}
+
+#mapa-container {
+    margin-top: 20px;
+    width: 100%; /* Garante que o mapa se ajuste ao tamanho do formulário */
+    height: 250px; /* Define uma altura fixa para o mapa */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#mapa-estatico {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Faz o mapa cobrir toda a área sem distorcer */
+    border-radius: 5px;
+}
